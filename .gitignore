@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+*.log
+
+# Personal source files (copies used by the site live in public/)
+/Ameerdeen N*.png
+/Ameerdeen N*.pdf
+/CCNA-_*.pdf
+/about_me.md
+/Details.txt

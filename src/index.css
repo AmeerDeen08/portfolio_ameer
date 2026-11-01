@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+/*
+  Theme tokens. Change these to re-skin the whole site.
+  ink       → main text colour
+  ink-deep  → page background
+  accent    → primary highlight (terminal green)
+  accent-blue → secondary highlight (cyan, used sparingly)
+  doom      → raised surfaces (navbar, icon tiles)
+*/
+@theme {
+  --color-ink: #DCE5DF;
+  --color-ink-deep: #0A0E0C;
+  --color-accent: #3BE48C;
+  --color-accent-blue: #22D3EE;
+  --color-doom: #1C2520;
+
+  --font-sans: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color: #DCE5DF;
+  background: #0A0E0C;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #0A0E0C;
+  /* Faint terminal grid + top glow */
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(59, 228, 140, 0.08), transparent 60%),
+    linear-gradient(rgba(220, 229, 223, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 229, 223, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 44px 44px, 44px 44px;
+  background-attachment: fixed;
+}
+
+/* Subtle CRT scanlines over everything (purely decorative) */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.018) 0px,
+    rgba(255, 255, 255, 0.018) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+::selection {
+  background: rgba(59, 228, 140, 0.3);
+  color: #ffffff;
+}
+
+/* GitHub contribution month spacing */
+.github-contribution-wrapper .github-contribution-months {
+  letter-spacing: 0.08em;
+}
+
+@keyframes profile-greeting {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
+.animate-profile-greeting {
+  animation: profile-greeting 6s ease-in-out infinite;
+}
+
+@keyframes heroFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScale {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-caret {
+  animation: caret-blink 1s step-end infinite;
+}
+
+/* Scan line sweeping over the profile photo */
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(400%);
+  }
+}
+
+.animate-scan {
+  animation: scan-sweep 3.2s linear infinite;
+}
+
+.glitch-text {
+  animation: glitch 0.8s ease-out 1.2s both;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+
+  10% {
+    transform: translate(-3px, 2px);
+    text-shadow:
+      3px 0 #22D3EE,
+      -3px 0 #3BE48C;
+  }
+
+  20% {
+    transform: translate(3px, -2px);
+    text-shadow:
+      -3px 0 #22D3EE,
+      3px 0 #3BE48C;
+  }
+
+  30% {
+    transform: translate(-2px, 0);
+    text-shadow:
+      2px 0 #22D3EE,
+      -2px 0 #3BE48C;
+  }
+
+  40% {
+    transform: translate(2px, 1px);
+    text-shadow:
+      -2px 0 #22D3EE,
+      2px 0 #3BE48C;
+  }
+
+  50% {
+    transform: translate(-1px, -1px);
+    text-shadow:
+      1px 0 #22D3EE,
+      -1px 0 #3BE48C;
+  }
+
+  60% {
+    transform: translate(1px, 0);
+    text-shadow:
+      -1px 0 #22D3EE,
+      1px 0 #3BE48C;
+  }
+
+  70% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
