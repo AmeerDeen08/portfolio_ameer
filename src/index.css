@@ -6,16 +6,16 @@
   Theme tokens. Change these to re-skin the whole site.
   ink       → main text colour
   ink-deep  → page background
-  accent    → primary highlight (terminal green)
-  accent-blue → secondary highlight (cyan, used sparingly)
+  accent    → primary highlight (signal orange)
+  accent-blue → secondary highlight (amber, used sparingly)
   doom      → raised surfaces (navbar, icon tiles)
 */
 @theme {
-  --color-ink: #DCE5DF;
-  --color-ink-deep: #0A0E0C;
-  --color-accent: #3BE48C;
-  --color-accent-blue: #22D3EE;
-  --color-doom: #1C2520;
+  --color-ink: #E6E1DD;
+  --color-ink-deep: #0D0B0A;
+  --color-accent: #F2572B;
+  --color-accent-blue: #FFB547;
+  --color-doom: #27211E;
 
   --font-sans: "Poppins", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -23,8 +23,8 @@
 
 :root {
   font-family: "Poppins", sans-serif;
-  color: #DCE5DF;
-  background: #0A0E0C;
+  color: #E6E1DD;
+  background: #0D0B0A;
   color-scheme: dark;
 }
 
@@ -35,12 +35,12 @@
 body {
   margin: 0;
   min-width: 320px;
-  background-color: #0A0E0C;
+  background-color: #0D0B0A;
   /* Faint terminal grid + top glow */
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(59, 228, 140, 0.08), transparent 60%),
-    linear-gradient(rgba(220, 229, 223, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(220, 229, 223, 0.025) 1px, transparent 1px);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(242, 87, 43, 0.08), transparent 60%),
+    linear-gradient(rgba(230, 225, 221, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(230, 225, 221, 0.025) 1px, transparent 1px);
   background-size: 100% 100%, 44px 44px, 44px 44px;
   background-attachment: fixed;
 }
@@ -62,7 +62,7 @@ body::after {
 }
 
 ::selection {
-  background: rgba(59, 228, 140, 0.3);
+  background: rgba(242, 87, 43, 0.3);
   color: #ffffff;
 }
 
@@ -182,43 +182,43 @@ body::after {
   10% {
     transform: translate(-3px, 2px);
     text-shadow:
-      3px 0 #22D3EE,
-      -3px 0 #3BE48C;
+      3px 0 #FFB547,
+      -3px 0 #F2572B;
   }
 
   20% {
     transform: translate(3px, -2px);
     text-shadow:
-      -3px 0 #22D3EE,
-      3px 0 #3BE48C;
+      -3px 0 #FFB547,
+      3px 0 #F2572B;
   }
 
   30% {
     transform: translate(-2px, 0);
     text-shadow:
-      2px 0 #22D3EE,
-      -2px 0 #3BE48C;
+      2px 0 #FFB547,
+      -2px 0 #F2572B;
   }
 
   40% {
     transform: translate(2px, 1px);
     text-shadow:
-      -2px 0 #22D3EE,
-      2px 0 #3BE48C;
+      -2px 0 #FFB547,
+      2px 0 #F2572B;
   }
 
   50% {
     transform: translate(-1px, -1px);
     text-shadow:
-      1px 0 #22D3EE,
-      -1px 0 #3BE48C;
+      1px 0 #FFB547,
+      -1px 0 #F2572B;
   }
 
   60% {
     transform: translate(1px, 0);
     text-shadow:
-      -1px 0 #22D3EE,
-      1px 0 #3BE48C;
+      -1px 0 #FFB547,
+      1px 0 #F2572B;
   }
 
   70% {

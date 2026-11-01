@@ -134,11 +134,11 @@ function About() {
           <div
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
-            className={`group relative isolate flex flex-col overflow-hidden rounded-xl border border-accent/15 bg-[#07100B] p-5 transition-all duration-300 ${
+            className={`group relative isolate flex flex-col overflow-hidden rounded-xl border border-accent/15 bg-[#120D0B] p-5 transition-all duration-300 ${
               isVisible ? "animate-[heroFadeUp_0.7s_ease-out_0.5s_both]" : "opacity-0"
             }`}
           >
-            <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_45%,rgba(59,228,140,0.14),transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_45%,rgba(242,87,43,0.14),transparent_60%)]" />
 
             <div className="flex items-center justify-between">
               <FaTerminal className="h-5 w-5 text-accent/80" />

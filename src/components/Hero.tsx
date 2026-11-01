@@ -10,11 +10,11 @@ import ProjectCover from "./ProjectCover"
 import { Tag } from "./shared"
 
 const GRAPH_LEVELS = [
-  "rgba(28, 37, 32, 0.9)",    // no contributions
-  "rgba(59, 228, 140, 0.25)", // accent tints
-  "rgba(59, 228, 140, 0.45)",
-  "rgba(59, 228, 140, 0.7)",
-  "#3BE48C",                  // most contributions
+  "rgba(39, 33, 30, 0.9)",    // no contributions
+  "rgba(242, 87, 43, 0.25)", // accent tints
+  "rgba(242, 87, 43, 0.45)",
+  "rgba(242, 87, 43, 0.7)",
+  "#F2572B",                  // most contributions
 ]
 
 // Fixed positions for the tilted icon pile (one per stack item, max 6)
@@ -333,8 +333,8 @@ function Hero() {
                   username={site.githubUsername}
                   theme={{
                     bgColor: "transparent",
-                    textColor: "#DCE5DF",
-                    inactiveTextColor: "#1C2520",
+                    textColor: "#E6E1DD",
+                    inactiveTextColor: "#27211E",
                     cellLevel0: GRAPH_LEVELS[0],
                     cellLevel1: GRAPH_LEVELS[1],
                     cellLevel2: GRAPH_LEVELS[2],
