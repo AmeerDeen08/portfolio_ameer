@@ -162,7 +162,7 @@ function StatusDialog({
       className="m-auto w-[calc(100%-2rem)] max-w-xs bg-transparent p-0 backdrop:bg-black/50 backdrop:backdrop-blur-sm"
     >
       {content && Icon && (
-        <div className="relative rounded-2xl border border-accent/15 bg-ink-deep p-4 text-ink shadow-2xl">
+        <div className="relative rounded-2xl border border-ink/10 bg-ink-deep p-4 text-ink shadow-2xl">
           <button
             type="button"
             onClick={onClose}

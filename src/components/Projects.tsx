@@ -42,7 +42,7 @@ function Projects() {
           return (
             <article
               key={project.slug}
-              className="group relative flex flex-col overflow-hidden rounded-[28px] border-[5px] border-black bg-[#161210] shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-accent/10"
+              className="group relative flex flex-col overflow-hidden rounded-[28px] border-[5px] border-black bg-[#1c1c1c] shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-accent/10"
             >
               {/* Hover tooltip */}
               <span className="pointer-events-none absolute right-4 top-4 z-10 origin-top-right rotate-6 scale-75 rounded-full bg-accent px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-wide text-ink-deep opacity-0 shadow-lg shadow-black/20 transition-all duration-300 group-hover:rotate-0 group-hover:scale-100 group-hover:opacity-100">
@@ -56,7 +56,7 @@ function Projects() {
               </div>
 
               {/* Folder-tab title */}
-              <div className="relative -mt-5 w-[78%] rounded-t-2xl bg-[#161210] px-5 pb-2 pt-4">
+              <div className="relative -mt-5 w-[78%] rounded-t-2xl bg-[#1c1c1c] px-5 pb-2 pt-4">
                 <p className="font-mono text-[9px] font-bold uppercase leading-tight tracking-wide text-accent">
                   {project.category}
                 </p>
@@ -66,7 +66,7 @@ function Projects() {
               </div>
 
               {/* Body */}
-              <div className="flex flex-1 flex-col justify-between gap-4 bg-[#161210] px-5 pb-5 pt-1">
+              <div className="flex flex-1 flex-col justify-between gap-4 bg-[#1c1c1c] px-5 pb-5 pt-1">
                 <p className="text-xs leading-5 text-white/55">{project.description}</p>
 
                 <div className="flex flex-wrap gap-1.5">

@@ -78,7 +78,7 @@ export default function Navbar() {
       aria-label="Primary"
       className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] left-1/2 z-50 -translate-x-1/2"
     >
-      <div className="flex items-center gap-1 rounded-full border border-accent/15 bg-doom/90 px-2 py-2 shadow-lg shadow-black/40 backdrop-blur-md">
+      <div className="flex items-center gap-1 rounded-full border border-ink/10 bg-doom/90 px-2 py-2 shadow-lg shadow-black/40 backdrop-blur-md">
         {navItems.map(({ id, label, icon: Icon }) => {
           const isActive = activeId === id
 

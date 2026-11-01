@@ -10,7 +10,7 @@ import ProjectCover from "./ProjectCover"
 import { Tag } from "./shared"
 
 const GRAPH_LEVELS = [
-  "rgba(39, 33, 30, 0.9)",    // no contributions
+  "rgba(38, 38, 38, 0.9)",    // no contributions
   "rgba(242, 87, 43, 0.25)", // accent tints
   "rgba(242, 87, 43, 0.45)",
   "rgba(242, 87, 43, 0.7)",
@@ -112,14 +112,14 @@ function Hero() {
 
         {/* Profile */}
         <div className="flex animate-[heroScale_0.7s_ease-out_0.15s_both] flex-col items-center gap-3 md:items-start">
-          <div className="relative aspect-square w-30 overflow-hidden rounded-xl border-2 border-accent shadow-[0_0_24px_-6px] shadow-accent/60 lg:w-38">
+          <div className="relative aspect-square w-30 overflow-hidden rounded-xl border-2 border-ink/15 lg:w-38">
             <img
               src={site.photo}
               alt={site.name}
               className="h-full w-full object-cover object-top"
             />
             {/* Scanner line */}
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 animate-scan bg-linear-to-b from-transparent via-accent/25 to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 animate-scan bg-linear-to-b from-transparent via-white/10 to-transparent" />
           </div>
 
           {site.resumeUrl && (
@@ -127,7 +127,7 @@ function Hero() {
               href={site.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-38 items-center justify-center gap-2 rounded-lg border border-accent/20 bg-doom py-2 text-xs font-bold text-ink/80 transition-all hover:-translate-y-0.5 hover:border-accent/60 hover:text-accent sm:text-sm"
+              className="flex w-38 items-center justify-center gap-2 rounded-lg bg-doom/90 py-2 text-xs font-bold text-ink/80 transition-all hover:-translate-y-0.5 hover:border-accent/60 hover:text-accent sm:text-sm"
             >
               <FaFileDownload className="h-3.5 w-3.5" aria-hidden="true" />
               {hero.resumeLabel}
@@ -333,8 +333,8 @@ function Hero() {
                   username={site.githubUsername}
                   theme={{
                     bgColor: "transparent",
-                    textColor: "#E6E1DD",
-                    inactiveTextColor: "#27211E",
+                    textColor: "#DEDEDE",
+                    inactiveTextColor: "#4D4D4D",
                     cellLevel0: GRAPH_LEVELS[0],
                     cellLevel1: GRAPH_LEVELS[1],
                     cellLevel2: GRAPH_LEVELS[2],

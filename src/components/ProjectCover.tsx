@@ -23,11 +23,11 @@ export default function ProjectCover({
   return (
     <div
       aria-hidden="true"
-      className={`relative h-full w-full overflow-hidden bg-[#100C0A] transition-transform duration-500 group-hover:scale-105 ${className}`}
+      className={`relative h-full w-full overflow-hidden bg-[#121212] transition-transform duration-500 group-hover:scale-105 ${className}`}
     >
       {/* Grid + glow */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(242,87,43,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(242,87,43,0.07)_1px,transparent_1px)] bg-size-[18px_18px]" />
-      <div className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[18px_18px]" />
+      <div className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
       <div className="absolute -bottom-12 left-6 h-32 w-32 rounded-full bg-accent-blue/10 blur-3xl" />
 
       {/* Big watermark icon */}
